@@ -1,22 +1,22 @@
-import { Contact, Home, Hotel, Menu, PersonStanding, RouteIcon } from "lucide-react"
+import { Binoculars, BriefcaseBusiness, CircleX, Clapperboard, Cog, Contact, Expand, EyeOff, Handshake, Home, Hotel, Menu, MonitorCog, Percent, PersonStanding, Plane, RouteIcon, Settings } from "lucide-react"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link } from "react-router-dom"
 
 const sidebar_items = [
-    { name: 'Anasayfa', icon: Home, color: 'white', href: '/' },
-    { name: 'OtelRezervasyon', icon: Hotel, color: 'white', href: '/rezervasyon' },
-    { name: 'TurRezervasyon', icon: RouteIcon, color: 'white', href: '/turRezervasyon' },
-    { name: 'MüşteriYönetimi', icon: Contact, color: 'white', href: '/müşteriYönetimi' },
-    { name: 'Operasyon', icon: Home, color: 'white', href: '/operasyon' },
-    { name: 'Muhasebe', icon: Home, color: '', href: '/muhasebe' },
-    { name: 'ReklamYönetimi', icon: Home, color: '', href: '/reklamYönetimi' },
-    { name: 'Tesisler', icon: Home, color: '', href: '/tesisler' },
-    { name: 'Turlar', icon: Home, color: '', href: '/turlar' },
-    { name: 'Transport', icon: Home, color: '', href: '/transport' },
-    { name: 'SiteAyarları', icon: Home, color: 'white', href: '/siteAyarları' },
-    { name: 'GenelAyarlar', icon: Home, color: 'white', href: '/genelAyarlar' },
-    { name: 'İnsanKaynakları', icon: PersonStanding, color: 'white', href: '/insanKaynakları' },
+    { name: 'Anasayfa', icon: Home, color: '#2b3e54', href: '/' },
+    { name: 'OtelRezervasyon', icon: Hotel, color: '#2b3e54', href: '/rezervasyon' },
+    { name: 'TurRezervasyon', icon: RouteIcon, color: '#2b3e54', href: '/turRezervasyon' },
+    { name: 'MüşteriYönetimi', icon: Contact, color: '#2b3e54', href: '/müşteriYönetimi' },
+    { name: 'Operasyon', icon: Handshake, color: '#2b3e54', href: '/operasyon' },
+    { name: 'Muhasebe', icon: Percent, color: '#2b3e54', href: '/muhasebe' },
+    { name: 'ReklamYönetimi', icon: Clapperboard, color: '#2b3e54', href: '/reklamYönetimi' },
+    { name: 'Tesisler', icon: BriefcaseBusiness, color: '#2b3e54', href: '/tesisler' },
+    { name: 'Turlar', icon: Binoculars, color: '#2b3e54', href: '/turlar' },
+    { name: 'Transport', icon: Plane, color: '#2b3e54', href: '/transport' },
+    { name: 'SiteAyarları', icon: MonitorCog, color: '#2b3e54', href: '/siteAyarları' },
+    { name: 'GenelAyarlar', icon: Cog, color: '#2b3e54', href: '/genelAyarlar' },
+    { name: 'İnsanKaynakları', icon: PersonStanding, color: '#2b3e54', href: '/insanKaynakları' },
 ]
 const Sidebar = () => {
 
@@ -40,7 +40,7 @@ const Sidebar = () => {
                     {sidebar_items.map((item) => (
                         <Link key={item.href} to={item.href}>
                             <motion.div
-                                className="flex items-center p-4 text-sm font-medium rounded-lg hover: bg-gray-700 transition-colors mb-2">
+                                className="flex items-center p-4 text-sm font-medium rounded-lg hover: bg-[#bdc1c6] text-[#2b3e54] transition-colors mb-2">
                                 <item.icon size={20} style={{ color: item.color, minWidth: "20px" }} />
                                 <AnimatePresence>
                                     {isSidebarOpen && (
@@ -59,11 +59,11 @@ const Sidebar = () => {
                         </Link>
                     ))}
                 </nav>
-                <div className="flex flex-row justify-around">
-                    <Menu size={20} color="#4e6680" />
-                    <Home size={20} color="#4e6680" />
-                    <Menu size={20} color="#4e6680" />
-                    <Home size={20} color="#4e6680" />
+                <div className="flex flex-row justify-around p-4">
+                    <Settings size={20} color="white" />
+                    <Expand size={20} color="white" />
+                    <EyeOff size={20} color="white" />
+                    <CircleX size={20} color="white" />
                 </div>
             </div>
         </motion.div>

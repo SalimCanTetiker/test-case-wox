@@ -1,4 +1,4 @@
-import { Baby, Mail, Map, PersonStanding, Phone, User } from "lucide-react"
+import { Baby, Mail, PersonStanding, Phone, User } from "lucide-react"
 import OptionButton from "./OptionButton"
 import Dropdown from "./Dropdown"
 
@@ -6,29 +6,23 @@ const List = () => {
     return (
         <div className="overflow-hidden">
             <div className='flex items-center bg-[#f4f7fa] text-[#37495f] w-full h-10'>İletişim Bilgileri</div>
-            <div className='flex flex-row p-2'>
-                <div className='flex flex-ro border h-6 mx-4'>
+            <div className='flex flex-row'>
+                <div className='flex flex-row border h-6 mx-1'>
                     <User size={18} />
                     <input
                         placeholder='İsim / Soyisim'
                     />
                 </div>
-                <div className='flex flex-ro border h-6 mx-4'>
+                <div className='flex flex-row border h-6 mx-1'>
                     <Phone size={18} />
                     <input
                         placeholder='Cep Telefonu'
                     />
                 </div>
-                <div className='flex flex-ro border'>
+                <div className='flex flex-row border h-6 mx-1'>
                     <Mail size={18} />
                     <input
                         placeholder='E-Posta Adresi'
-                    />
-                </div>
-                <div className='flex flex-row border'>
-                    <Map size={18} />
-                    <input
-                        placeholder='TC Kimlik Numarası'
                     />
                 </div>
             </div>

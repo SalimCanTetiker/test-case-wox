@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div className='flex text-gray-100'>
       <div className='fixed inset-0 z-0'>
-				<div className='absolute inset-0 bg-gradient-to-br via-gray-800 to-gray-900 opacity-80' />
+				<div className='absolute inset-0 bg-gradient-to-br bg-[#2b3e54] opacity-80' />
 				<div className='absolute inset-0 backdrop-blur-sm' />
 			</div>
       <Sidebar />
